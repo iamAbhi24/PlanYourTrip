@@ -1,0 +1,56 @@
+
+ 
+ <div class="tableContainer" style="margin:1.5rem 0">
+  <div class="backBtn">
+    <span class="line tLine"></span>
+    <span class="line mLine"></span>
+    <span class="label" ><a  [routerLink]="['']">Go to Home Page</a></span>
+    <span class="line bLine"></span>
+  </div>
+    <h4 class="slipTitle">My booking details</h4>
+    <table id="activos_fijosSumaAseguradaTable" class="indemnizacionTable">
+      <thead>
+        <tr>
+          <th style="text-align: center">#</th>
+          <th style="text-align: center">State</th>
+          <th style="text-align: center">Hotel</th>
+          <th style="text-align: center">Name</th>
+          <th style="text-align: center">E-mail</th>
+          <th style="text-align: center">Mobile-Number</th>
+          <th style="text-align: center">No.Of Adults</th>
+          <th style="text-align: center">No.Of Children</th>
+          <th style="text-align: center">Check-in Date</th>
+          <th style="text-align: center">Check-out Date</th>
+          <th style="text-align: center">Actions</th>
+          <th style="text-align: center; width: 42px;" class="sorting_disabled" rowspan="1"
+              colspan="1" aria-label="Add row">
+
+          </th>
+        </tr>
+      </thead>
+      
+      <tbody id="activos_fijosSumaAseguradaTableBody">
+  
+        <tr tr *ngFor="let b of mybooking">
+          <td><span>{{b.userid}}</span></td>
+            <td><span>{{b.state}}</span></td>
+            <td><span>{{b.hotel}}</span></td>
+            <td><span>{{b.username}}</span></td>
+            <td><span>{{b.email}}</span></td>
+            <td><span>{{b.phoneNo}}</span></td>
+            <td><span>{{b.adults}}</span></td>
+            <td><span>{{b.children}}</span></td>
+            <td><span>{{b.check_in_date}}</span></td>
+            <td><span>{{b.check_out_date}}</span></td>
+          <td style="text-align: center">
+            <span class="slipTitle incendioTotalSpan" id="rowTotal1"><button  (click)="deleteBooking(b.userid)">cancel</button></span>
+          </td>
+          <td></td>
+        </tr>
+  
+      </tbody>
+  
+    </table>
+  </div> 
+
+

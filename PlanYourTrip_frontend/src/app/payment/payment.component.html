@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div class="card">  
+      <h2 class="visa">VISA</h2>
+      <h3 class="num">1111-2222-3333-4444</h3>
+  
+        <h4>NAME<br>Holder name</h4>
+        <h4>EXP<br>Mon/Year</h4>
+        <h4>CVV<br>***</h4>
+  
+    </div>
+    <div class="main">
+      <div class="content">
+        <h1>Payment Details</h1>
+        <form>
+          
+       <!--   <label>Name</label>-->
+          <input id="name" type="name" placeholder="Enter card holder Name ">
+          
+         <!-- <label>Card Number</label>-->
+          <input type="text" placeholder="Enter your card number">
+          
+        <!--  <label>Expiration Date</label>-->
+          <input type="month" placeholder="month/year">
+          <input type="user" placeholder="CVV">
+          
+        </form>
+        <div class="payment">
+          <button [routerLink]="['/paymentsuccess']">Pay</button>
+          </div>
+      </div>
+    </div>
+  </div>

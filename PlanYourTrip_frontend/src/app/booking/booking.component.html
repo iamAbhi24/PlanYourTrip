@@ -1,0 +1,61 @@
+<form action="reservation.php" method="post"  >
+<form ngForm="bookings" (ngSubmit)="Bookings()">
+  <div class="elem-group">
+    
+    <label for="room-selection">Select State</label>
+    <select id="room-selection" name="state" required [(ngModel)]="booking.state">
+        <option value="">Choose State</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Ap">Andhra Pradesh</option>
+        <option value="Bihar">Bihar</option>
+    </select>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Select Room Preference</label>
+    <select id="room-selection" name="hotel" required [(ngModel)]="booking.hotel">
+        <option value="">Choose a Hotel from the List</option>
+        <option value="Hotel Raj Palace">Hotel Raj Palace (Rs 1000/night)</option>
+        <option value="Happy Spring Hotel">Happy Spring Hotel (Rs 1500/night)</option>
+        <option value="Hotel Red Stone">Hotel Red Stone (Rs 1000/night)</option>
+        <option value="Rose Hotel">Rose Hotel (Rs 1200/night)</option>
+        <option value="Hotel Basera">Hotel Basera (Rs 2000/night)</option>
+    </select>
+  </div>
+
+    <div class="elem-group">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="username" placeholder="Enter your name" pattern=[A-Z\sa-z]{3,20} required [(ngModel)]="booking.username">
+    </div>
+    <div class="elem-group">
+      <label for="email">Your E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required  [(ngModel)]="booking.email">
+    </div>
+    <div class="elem-group">
+      <label for="phone">Your Phone</label>
+      <input type="tel" id="phone" name="phoneNo" placeholder="Enter your mobile number"pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required [(ngModel)]="booking.phoneNo">
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label for="adult">Adults</label>
+      <input type="number" id="adult" name="adults" placeholder="No.of Adults" min="1" required [(ngModel)]="booking.adults">
+    </div>
+    <div class="elem-group inlined">
+      <label for="child">Children</label>
+      <input type="number" id="child" name="children" placeholder="No.of children" min="0" required [(ngModel)]="booking.children">
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkin-date">Check-in Date</label>
+      <input type="date" id="checkin-date" name="check_in_date" required [(ngModel)]="booking.check_in_date">
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkout-date">Check-out Date</label>
+      <input type="date" id="checkout-date" name="check_out_date" required [(ngModel)]="booking.check_out_date">
+    </div>
+    <hr>
+    <button  type="submit" >Book now</button>
+  </form>
+
+  </form>

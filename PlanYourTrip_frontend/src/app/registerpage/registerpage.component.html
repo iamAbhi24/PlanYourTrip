@@ -1,0 +1,52 @@
+<div class="box">
+    <div class="form">
+        <h2>SIGN UP</h2>
+        <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+       
+        <div class="inputBox">
+            <input type="text" required name="name" [(ngModel)]="loginpage.name" #name="ngModel" required
+            [class.is-invalid]="name.invalid && name.touched" >
+            <span>Username</span>
+            <!-- <small class="text-danger" [class.d-none]="name.valid || name.untouched">user name is required</small>
+                -->
+           
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="text" required name="email"  [(ngModel)]="loginpage.email"  pattern="^\w+@[a-zA-Z_]+?|.[a-zA-Z]{2,3}$"
+            #email="ngModel"
+           
+            [class.is-invalid]="email.invalid && email.touched"
+            >
+            <!-- <div *ngIf="email.errors && (email.invalid && email.touched)">
+                <small class="text-danger" *ngIf="email.errors?.['required']">email field is required </small>
+                <small class="text-danger" *ngIf="email.errors?.['pattern']">Enter a valid email</small>
+             </div> -->
+            <span>Email</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="password" required  name="password" [(ngModel)]="loginpage.password" required #password="ngModel"
+            [class.is-invalid]="password.invalid && password.touched">
+            <!-- <small class="text-danger" [class.d-none]="password.valid || password.untouched">Enter your Password</small>
+                  -->
+            <span>Password</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="password" required  name="cpassword" [(ngModel)]="loginpage.password" required #cpassword="ngModel"
+            [class.is-invalid]="cpassword.invalid && cpassword.touched">
+            <!-- <small class="text-danger" [class.d-none]="(cpassword.valid==password.untouched)|| cpassword.untouched">Password & ConfirmPassword should be same</small>
+                  -->
+            <span>Confirm Password</span>
+            <i></i>
+        </div>
+        <div class="links">
+            <a href="#">Existing User!!</a>
+            <a [routerLink]="['/loginpage']">Signin</a>
+        </div>
+        <input [disabled]="Registerform.form.invalid" type="submit" value="Register">
+    </form>
+    </div>
+</div>
+

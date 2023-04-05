@@ -1,0 +1,47 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tableContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* tablas */
+
+table thead tr th {
+  text-align: center;
+}
+.indemnizacionTable {
+  border-collapse: collapse;
+  background-color: #e1e1e1;
+  overflow-x: scroll;
+  color: var(--global-grey);
+  max-width: 800px;
+  border-radius: 10px;
+
+}
+
+.indemnizacionTable th, .indemnizacionTable td {
+  text-align: left;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.indemnizacionTable th {
+  background-color: #1E441E;
+  color: white;
+}
+
+input {
+  border: rgb(122, 122, 122);
+  border-radius: 6px;
+  width: 330px ;
+  min-width: 30px ;
+  padding: 5px 8px;
+  margin: 0;
+  text-align:center
+}
+
+/* back */
